@@ -46,8 +46,10 @@ console.log(newArray);
 const x = 5;
 const y = 11;
 const addAsync = new Promise ((resolve, reject) => {
-        if ( x>3 && y > 4){
-            resolve("hello");
+        if (typeof x && y >= 0){
+            resolve(x+y);
+        }else  if(typeof x && y <= 0){
+            resolve(x+y); 
         }else {
             reject("error");
     }
